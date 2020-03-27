@@ -8,7 +8,7 @@ class Pokemon extends Component {
   toggleForm = () => this.setState({ showForm: !this.state.showForm })
 
   render() {
-    const { name, type, location, level, move} = this.props
+    const { name, location, level, move, deletePokemon, id} = this.props
     const { showForm } = this.state
     return(
       <>
@@ -18,11 +18,11 @@ class Pokemon extends Component {
           :
           <div>
           <h1>{name}</h1>
-          <p>Type: {type}</p>
           <p>Location: {location}</p>
           <p>Level: {level}</p>
           <p>Move: {move}</p>
           <Button onClick={this.toggleForm}>Edit</Button>
+          <Button onClick={() => deletePokemon(id)}>Delete</Button>
         </div>
         }
       </>

@@ -1,10 +1,10 @@
 import React from 'react';
+import { Container } from 'semantic-ui-react';
 import { Route, Switch } from 'react-router-dom';
 import Home from './components/shared/Home';
 import About from './components/shared/About'
 import NoMatch from './components/shared/NoMatch'
 import Navbar from './components/shared/Navbar';
-import { Container } from 'semantic-ui-react';
 import Pokedex from './components/pokemon/Pokedex';
 
 const App = () => (
